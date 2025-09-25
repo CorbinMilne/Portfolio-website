@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Portfolio</title>
+</head>
+<body>
+  <!-- NAVBAR -->  
+  <nav>
+    <div class="left">
+      <a href="/">Corbin Milne</a> 
+    </div>
+
+    <div class="right">
+      <a href="http://linkedin.com/in/corbinmilne2113" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>  
+
+      <a href="mailto:corbin.milne2004@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a> 
+    </div>
+  </nav> 
+
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+      <div class="text">
+        <h2>Hi, I'm Corbin 👋</h2>
+        <p>I am a Computer Engineering student at the University of Maryland, College Park with a passion for 
+          solving real-world problems through innovative software systems. My experience spans backend development,
+          sensor-integrated automation with microcontrollers, and microprocessors. I'm driven by curiosity, creativity,
+          and a desire to learn from hands-on experience. I'm actively seeking internships where I can apply these skills, 
+          as a software engineer or embedded systems engineer, to contribute to impactful projects and continue my growth in the field.        
+        </p>
+
+        <div class="links">
+          <a href="#skills">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>  
+          </a>
+
+          <a href="#projects">
+            <i class="fa-solid fa-terminal"></i>
+            <span>Projects</span>  
+          </a>
+
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>  
+          </a>
+        </div>
+      </div>
+
+      <div class="headshot">
+        <img src="images/hero-headshot.webp" alt="corbin milne headshot">  
+      </div>
+    </section>
+
+    <!-- SECTION 2: Skils -->
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+
+        <div class="text">
+          Proficient in Java, C, and Python with hands-on experience in OOP, circuit integration, 
+          backend development with Springboot, and collaborative project work. Strong problem-solving, leadership, 
+          and communication skills.
+        </div>
+
+        <div class="cells">
+           <div class="cell">
+            <img src="images/java-logo.webp" alt="java logo">
+            <span></span>
+           </div> 
+
+           <div class="cell">
+            <img src="images/c-logo_resized.webp" alt="c logo">
+            <span></span>
+           </div>
+
+           <div class="cell">
+            <img src="images/python-logo_resized.webp" alt="pyhton logo">
+            <span></span>
+           </div>
+
+           <div class="cell">
+            <img src="images/springboot-logo_resized.webp" alt="springboot logo">
+            <span></span>
+           </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 3: Projects -->
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <div class="project-heading">
+          <p>Home Security Monitoring System</p>
+        </div>
+        <div class="project-description">
+          I built a home automation and security system using a Raspberry Pi 5, written in C. 
+          The system uses a PIR motion sensor to detect movement, triggering a camera module to capture 
+          images in real time. Events are timestamped and logged locally, while a notification system sends 
+          alert emails with photo attachments using curl and SMTP scripting. To improve usability, 
+          I incorporated button input for arming/disarming the system and LED indicators for status feedback. 
+          This project helped me apply low-level hardware interfacing, real-time event handling, and scripting 
+          for automation in a real-world setting.
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-heading">
+          <p>Space Invaders</p>
+        </div>
+        <div class="project-description">
+          I built a fully functional clone of the classic Space Invaders arcade game in Java, applying object-oriented 
+          design principles such as encapsulation and polymorphism. The game includes enemy waves, player-controlled shooting, 
+          collision detection, and score tracking, all managed through event-driven logic. I structured the program using modular 
+          classes for the player, enemy, bullets, and game engine, giving me hands-on experience with GUI rendering, keyboard input 
+          handling, and game loop timing.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+
+        <div class="group">
+            <div class="text">
+               I'm always open to connecting with fellow engineers, recruiters, and collaborators. Whether you have
+               a project in mind, a quick question about my work, or just want to talk tech, feel free to reach out using
+               the form. I'll get back to you as soon as I can!
+            </div>
+
+            <form action="https://formspree.io/f/xnngnppn" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" cols="30" rows="10" required></textarea>
+              
+                <input type="hidden" name="_subject" value="Portfolio Contact">
+                <input type="hidden" name="_format" value="plain">
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+  </main>
+</body>
+</html>
